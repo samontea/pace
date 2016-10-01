@@ -10,7 +10,7 @@ defmodule PaceTest do
   test "sending stop kills the process" do
     {:ok, pid} = Pace.start_link
     send pid, :stop
-    Process.sleep(10)
+    Process.sleep(20)
     assert !(Process.alive? pid)
   end
 end
