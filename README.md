@@ -6,7 +6,7 @@ This library implements a light weight process that can be used to easily analys
 
 ## Usage
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+If [available in Hex](https://hex.pm/packages/pace), the package can be installed as:
 
   1. Add `pace` to your list of dependencies in `mix.exs`:
 
