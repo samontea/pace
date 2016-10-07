@@ -1,8 +1,8 @@
 # Pace
 
-**TODO: Add description**
+This library implements a light weight process that can be used to easily analyse the performance of your applicaiton.
 
-## Installation
+## Usage
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
 
@@ -14,11 +14,16 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
     end
     ```
 
-  2. Ensure `pace` is started before your application:
+  2. Start a pace process sometime in your application:
 
     ```elixir
-    def application do
-      [applications: [:pace]]
-    end
+	{:ok, pid} = Pace.start_link
     ```
 
+  3. The following api is exposed:
+
+    ```elixir
+	send pid, :restart # restarts the server's timer
+	send pid, {:lap, "message"} # logs a lap message containing the pid of the pace process, current time ellapsed, and message
+	send pid, :stop  # logs a termination message containing the pid of the pace process and current time ellapsed. the timer process is stopped
+    ```
