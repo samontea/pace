@@ -5,22 +5,28 @@ defmodule Pace do
   ## Usage
 
   First start a pace process:
-      iex> {:ok, pid} = Pace.start_link
-      {:ok, #PID<0.185.0>}
+
+      {:ok, pid} = Pace.start_link
 
   After the pace process is created it starts timing.
   Communication from now on with the process will be done by sending messages to the process.
 
   To restart the pace timer:
+
+      iex> {:ok, pid} = Pace.start_link
       iex> send pid, :restart
       :restart
 
   To log an elapsed time and message:
+
+      iex> {:ok, pid} = Pace.start_link
       iex> send pid, {:lap, "message"}
-      :restart
+      {:lap, "message"}
 
   To stop the timer (logs the time elapsed):
-      iex> send pid, :stop
+
+      iex> {:ok, pid} = Pace.start_link
+      iex> send pid, :restart
       :restart
   """
 
@@ -31,8 +37,7 @@ defmodule Pace do
 
   ## Examples
 
-      iex> Pace.start_link
-      {:ok, #PID<0.185.0>}
+      Pace.start_link
   """
   def start_link() do
     {:ok, spawn_link(fn -> listen(System.monotonic_time(:nanoseconds)) end)}
