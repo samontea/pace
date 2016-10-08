@@ -39,7 +39,7 @@ defmodule Pace.Mixfile do
   defp package do
     [
       name: :pace,
-      files: ["lib", "mix.exs", "README*", "LISCENCE*"],
+      files: ["lib", "mix.exs", "README*", "LICENSE*"],
       maintainers: ["Samuel Mercier"],
       licenses: ["DBAD Public License"],
       links: %{

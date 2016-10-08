@@ -2,11 +2,12 @@
 
 [![Build Status](https://travis-ci.org/samontea/pace.svg?branch=master)](https://travis-ci.org/samontea/pace)
 
+
 This library implements a light weight process that can be used to easily analyse the performance of your applicaiton.
 
-## Usage
+[Available in Hex](https://hex.pm/packages/pace)
 
-If [available in Hex](https://hex.pm/packages/pace), the package can be installed as:
+## Usage
 
   1. Add `pace` to your list of dependencies in `mix.exs`:
 
