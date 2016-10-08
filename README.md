@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/samontea/pace.svg?branch=master)](https://travis-ci.org/samontea/pace)
 
 
-This library implements a light weight process that can be used to easily analyse the performance of your applicaiton.
+This library implements a light weight process that can be used to easily analyse the performance of your application.
 
 [Available in Hex](https://hex.pm/packages/pace)
 
